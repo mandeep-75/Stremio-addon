@@ -1,0 +1,10 @@
+{
+  "id": "org.vidsrcaddon",
+  "version": "1.0.0",
+  "name": "VidSrc Addon",
+  "description": "Streams movies and TV shows from Vidsrc API.",
+  "resources": ["stream"],
+  "types": ["movie", "series", "episode"],
+  "idPrefixes": ["tt", "tmdb"],
+  "catalogs": []
+}
