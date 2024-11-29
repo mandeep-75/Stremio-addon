@@ -4,7 +4,7 @@
 *some ads,redirect inside player but bearable.
 *doesn't work on tizan os due to external app restrictions.
 *used external player due to scrapping difficulties. 
-
+*final version
 
 
 
