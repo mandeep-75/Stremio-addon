@@ -18,7 +18,9 @@ const builder = new addonBuilder({
     catalogs: [],
     resources: ['stream'],
     types: ['movie', 'series'],
-    idPrefixes: ['tt', 'tmdb']
+    idPrefixes: ['tt', 'tmdb'],
+    background: "https://i.ibb.co/8j8rPmt/george-xistris-TSS45gy5e-Qw-unsplash.jpg",
+    logo: "https://i.ibb.co/YtFbyJH/streamio-app-logo.webp"
 });
 
 builder.defineStreamHandler(async (args) => {
