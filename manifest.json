@@ -1,10 +1,13 @@
 {
   "id": "org.vidsrcaddon",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "name": "VidSrc Addon",
   "description": "Streams movies and TV shows from Vidsrc API.",
   "resources": ["stream"],
   "types": ["movie", "series", "episode"],
   "idPrefixes": ["tt", "tmdb"],
-  "catalogs": []
+  "catalogs": [],
+  "background": "https://i.ibb.co/8j8rPmt/george-xistris-TSS45gy5e-Qw-unsplash.jpg",
+  "logo": "https://i.ibb.co/YtFbyJH/streamio-app-logo.webp"
 }
+      

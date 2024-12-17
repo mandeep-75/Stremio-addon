@@ -12,9 +12,9 @@ app.use((req, res, next) => {
 
 const builder = new addonBuilder({
     id: 'org.vidsrcaddon',
-    version: '1.0.0',
-    name: 'VidSrc strem made by Mandeep Singh',
-    description: 'Streams movies and TV shows from Vidsrc API in an external player.',
+    version: '1.0.2',
+    name: 'VidSrc strem',
+    description: 'Streams movies and TV shows from Vidsrc API in an external Vidsrc player.',
     catalogs: [],
     resources: ['stream'],
     types: ['movie', 'series'],
@@ -54,7 +54,8 @@ builder.defineStreamHandler(async (args) => {
         console.log("Generated API URL:", apiUrl);
 
         const stream = {
-            title: "Watch on VidSrc Player",
+            title: `Watch on External Player
+            Made by mandeep Singh`,
             url: apiUrl,
             externalUrl: apiUrl,
             behaviorHints: {
