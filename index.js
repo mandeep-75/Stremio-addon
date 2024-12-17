@@ -14,7 +14,7 @@ const builder = new addonBuilder({
     id: 'org.vidsrcaddon',
     version: '1.0.2',
     name: 'VidSrc strem',
-    description: 'Streams movies and TV shows from Vidsrc API in an external Vidsrc player.',
+    description: 'Streams movies and TV shows from Vidsrc API in an external Vidsrc player. Only tested on android',
     catalogs: [],
     resources: ['stream'],
     types: ['movie', 'series'],
