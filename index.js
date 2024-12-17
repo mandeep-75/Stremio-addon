@@ -56,7 +56,7 @@ builder.defineStreamHandler(async (args) => {
         console.log("Generated API URL:", apiUrl);
 
         const stream = {
-            title: `Watch on External Player.(Made by Mandeep Singh)`,
+            title: `Watch in an External Player. (Made by Mandeep Singh)`,
             url: apiUrl,
             externalUrl: apiUrl,
             behaviorHints: {
