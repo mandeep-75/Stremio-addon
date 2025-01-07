@@ -11,10 +11,10 @@ app.use((req, res, next) => {
 });
 
 const builder = new addonBuilder({
-    id: 'org.vidsrcaddon',
-    version: '1.0.2',
-    name: 'VidSrc strem',
-    description: 'Streams movies and TV shows from Vidsrc API in an external Vidsrc player. Only tested on android',
+    id: 'org.anyembedaddon',
+    version: '1.0.0',
+    name: 'Anyembed Strem',
+    description: 'Streams movies and TV shows from Autoembed API in an external Autoembed player. Only tested on Android.',
     catalogs: [],
     resources: ['stream'],
     types: ['movie', 'series'],
@@ -31,26 +31,31 @@ builder.defineStreamHandler(async (args) => {
     try {
         if (args.type === 'movie') {
             if (args.id.startsWith("tt")) {
-                apiUrl = `https://vidsrc.xyz/embed/movie?imdb=${args.id}`;
+                apiUrl = `https://player.autoembed.cc/embed/movie/${args.id}`;
             } else if (args.id.startsWith("tmdb")) {
-                apiUrl = `https://vidsrc.xyz/embed/movie?tmdb=${args.id}`;
+                apiUrl = `https://player.autoembed.cc/embed/movie/${args.id}`;
             } else {
                 return { streams: [] };
             }
         } else if (args.type === 'series') {
             if (args.id.startsWith("tt")) {
-                apiUrl = `https://vidsrc.xyz/embed/tv?imdb=${args.id}`;
+                apiUrl = `https://player.autoembed.cc/embed/tv/${args.id}`;
             } else if (args.id.startsWith("tmdb")) {
-                apiUrl = `https://vidsrc.xyz/embed/tv?tmdb=${args.id}`;
+                apiUrl = `https://player.autoembed.cc/embed/tv/${args.id}`;
             } else {
                 return { streams: [] };
             }
 
             if (args.season && args.episode) {
-                apiUrl += `&season=${args.season}&episode=${args.episode}`;
+                apiUrl += `/${args.season}/${args.episode}`;
             }
         } else {
             return { streams: [] };
+        }
+
+        // Adding optional server parameter
+        if (args.server) {
+            apiUrl += `?server=${args.server}`;
         }
 
         console.log("Generated API URL:", apiUrl);
