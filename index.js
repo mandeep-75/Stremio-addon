@@ -13,7 +13,7 @@ app.use((req, res, next) => {
 const builder = new addonBuilder({
     id: 'org.anyembedaddon',
     version: '1.0.0',
-    name: 'Anyembed Strem',
+    name: 'Autoembed Strem',
     description: 'Streams movies and TV shows from Autoembed API in an external Autoembed player. Only tested on Android.',
     catalogs: [],
     resources: ['stream'],
