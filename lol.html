@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embed Player</title>
+  <p>made by mandeep singh #no-ads#redirects</p>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000; /* Black background for a cinematic feel */
+    }
+    .player-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px; /* Adjust max width as needed */
+      aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+      background: #000;
+    }
+    .player-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    /* Optional: Handle rotation for mobile */
+    @media (orientation: portrait) {
+      .player-container {
+        max-width: 100%;
+        height: 70vh;
+      }
+    }
+    @media (orientation: landscape) {
+      .player-container {
+        max-width: 100%;
+        height: 100vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="player-container">
+    <iframe 
+      sandbox="allow-scripts allow-same-origin" 
+      src="https://vidsrc.xyz/embed/tv?imdb=tt7942794:6:7" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</body>
+</html>
